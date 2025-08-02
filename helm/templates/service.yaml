@@ -9,4 +9,4 @@ spec:
     app: meow-rps                        # 위 deployment의 label과 연결
   ports:
     - port: {{ .Values.service.port }}   # 클러스터 내부 접근 포트
-      targetPort: 8080                   # 실제 컨테이너 내부 포트
+      targetPort: 8000                   # 실제 컨테이너 내부 포트
