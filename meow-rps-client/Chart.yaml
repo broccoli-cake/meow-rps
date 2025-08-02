@@ -1,0 +1,4 @@
+apiVersion: v2
+name: meow-rps-client
+version: 0.1.0
+
