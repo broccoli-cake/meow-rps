@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meow-rps
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meow-rps
+  template:
+    metadata:
+      labels:
+        app: meow-rps
+    spec:
+      containers:
+        - name: meow-rps
+          image: broccolicake/meow-rps:latest
+          ports:
+            - containerPort: 8000
+

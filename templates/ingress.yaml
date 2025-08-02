@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: meow-rps
+  annotations:
+    nginx.ingress.kubernetes.io/websocket-services: "meow-rps"
+spec:
+  rules:
+    - host: meow.yourdomain.com
+      http:
+        paths:
+          - path: /ws
+            pathType: Prefix
+            backend:
+              service:
+                name: meow-rps
+                port:
+                  number: 80
+

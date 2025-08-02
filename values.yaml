@@ -1,0 +1,8 @@
+image:
+  repository: broccolicake/meow-rps
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
+
