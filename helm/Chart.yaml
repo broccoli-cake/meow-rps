@@ -1,0 +1,8 @@
+# 이 Helm Chart의 메타데이터를 정의한다. 이름, 버전, 설명 등을 Helm에게 알려준다.
+apiVersion: v2
+name: meow-rps
+description: A Simple PvP Rock Paper Sissors game
+type: application
+version: 0.1.0
+appVersion: "1.0"
+

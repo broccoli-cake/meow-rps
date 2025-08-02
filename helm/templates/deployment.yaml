@@ -1,0 +1,21 @@
+# 앱을 실행하는 파드의 배포 방식을 정의
+# 레플리카 수, 어떤 이미지 쓸지, 어떤 포트 열지, 어떤 라벨 붙일지 결정
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: meow-rps
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: meow-rps
+  template:
+    metadata:
+      labels:
+        app: meow-rps
+    spec:
+      containers:
+        - name: meow-rps
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8080
